@@ -61,24 +61,15 @@ public class MainActivity extends AppCompatActivity {
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(myObject.getFollowed()){
-                    if (isChecked) {
-                        // Do something when ToggleButton is checked
-                        myObject.setFollowed(true);
-                    } else {
-                        // Do something when ToggleButton is unchecked
-                        myObject.setFollowed(false);
-                    }
-                }else{
-                    if (isChecked) {
-                        // Do something when ToggleButton is checked
-                        myObject.setFollowed(true);
-                    } else {
-                        // Do something when ToggleButton is unchecked
-                        myObject.setFollowed(false);
-                    }
-                }
 
+                if (isChecked) {
+                    // Do something when ToggleButton is checked
+                    myObject.setFollowed(true);
+                } else {
+                    // Do something when ToggleButton is unchecked
+                    myObject.setFollowed(false);
+                }
+                Log.d("TAG", String.valueOf(myObject.Followed));
                 /*String title_name = "";
                 if(myObject.Followed){
                     title_name="Followed";
